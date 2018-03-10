@@ -6,7 +6,6 @@ public class Snake {
     private Direction direction = Direction.RIGHT;
     private Point2D head;
     private Point2D previousTail;
-//    private int length;
     List<Point2D> body = new ArrayList<>();
 
     public Snake(Point2D head){
@@ -31,7 +30,7 @@ public class Snake {
     }
 
     public boolean eatFood(Food food){
-        return this.head.equals(food.getPosition());
+        return head.equals(food.getPosition());
     }
 
 
@@ -40,8 +39,7 @@ public class Snake {
     }
 
     public boolean isDead() {
-        return this.body.indexOf(this.head)>1;
-        //and test if the head is in the border
+        return body.lastIndexOf(head) > 0;
     }
 
     public int getLength(){

@@ -1,3 +1,5 @@
+//advance: speed changing/add points
+
 import javafx.geometry.Point2D;
 import java.util.Random;
 
@@ -51,9 +53,6 @@ public class Game {
 
     public void setDirection(Direction direction){
         snake.setDirection(direction);
-        System.out.println(direction);
-//        this.direction = direction;
-
     }
 
 
